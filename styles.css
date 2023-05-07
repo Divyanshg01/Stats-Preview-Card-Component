@@ -97,7 +97,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3rem 1.3rem;
+    margin: 3rem 1.2rem;
 
 }
 main{
@@ -147,6 +147,7 @@ main{
   display: flex;
   justify-content: space-between;
   padding-right: 5.5rem;
+  gap: 1rem;
 }
 .num{
   font-family: 'Inter';
