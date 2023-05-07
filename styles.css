@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root{
+    --very-dark-blue-mainbg : hsl(233, 47%, 7%);
+    --dark-desaturared-blue-cardbg:hsl(244, 38%, 16%) ;
+    --soft-violet-accent:hsl(277, 64%, 61%) ;
+
+    --white:white;
+    --slightly-transparent-white-mainp : hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white-stath :hsla(0, 0%, 100%, 0.6);
+
+    font-size: 62.5%;
+   
+
+
+
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+div,span,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+    background-color: var(--very-dark-blue-mainbg);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 1.3rem;
+
+}
+main{
+  max-width: 103rem;
+  
+  background-color: var(--dark-desaturared-blue-cardbg);
+  border-top-left-radius: 1.4rem;
+  border-bottom-left-radius: 1.4rem;
+  border-top-right-radius: 1.4rem;
+  border-bottom-right-radius: 1.4rem;
+  overflow: hidden;
+}
+.container{
+  display: flex;
+}
+.info{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  padding-right: 8rem;
+  gap: 6rem;
+ 
+
+}
+.header{
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.title{
+  font-family: 'Inter';
+  font-weight: 700;
+}
+.highlighted{
+  color: var(--soft-violet-accent);
+}
+.benifits{
+  font-family: 'Inter';
+  font-weight: 400;
+  color: var(--slightly-transparent-white-mainp);
+
+}
+
+.data{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5.5rem;
+}
+.num{
+  font-family: 'Inter';
+  font-weight: 700;
+}
+.subtext{
+  font-family: 'Lexend Deca';
+  letter-spacing: 0.1rem;
+  color: var(--slightly-transparent-white-stath);
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+picture{
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  filter: brightness(110%) saturate(110%) hue-rotate(0deg);
+  background-color: var(--soft-violet-accent);
+  mix-blend-mode: multiply; 
+  /* opacity: 0.6; */
+}
+.container picture img{
+  height: 100%;
+
+  width: 100%;
+  object-fit: cover;
+}
+
+
+@media screen and (width<=450px){
+  .container{
+    flex-direction: column;
+    
+  }
+  .info{
+    width: auto;
+    order: 2;
+  }
+  picture{
+    order: 1;
+    width: auto;
+  }
+  
+
+
+}
